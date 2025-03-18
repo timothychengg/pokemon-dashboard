@@ -47,6 +47,6 @@ Instead of Docker, the project was deployed successfully using Vercel, which pro
 Future Improvements
 1. Implement Infinite Scroll & Pagination – Currently, Pokémon are randomly selected and limited to 10 per request. Pagination would improve UX.
 2. Improve Error Messages – Provide user-friendly error messages when the API fails instead of console logging.
-3. Animations & Transitions – Enhance UI with smooth animations for a more engaging experience.....also definitely need music.
+3. Animations & Transitions – Enhance UI with smooth animations for a more engaging experience.
 
 
