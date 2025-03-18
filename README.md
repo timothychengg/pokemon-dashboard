@@ -1,27 +1,34 @@
 Pokémon Dashboard
-Live Deployment 👉 Pokemon Dashboard
+Live Deployment 👉 https://pokemon-dashboard-aq1gpyr3k-timothy-chengs-projects.vercel.app/
 
 The Pokémon Dashboard is an interactive web application that allows users to explore Pokémon by type using the PokéAPI. Built with Next.js and TypeScript, the application delivers a fast, responsive, and visually engaging user experience.
 
-Design Decisions & Approach
+---------------------------------------------------------------------------------------------------------------------------------------------
 
-Tech Stack & Deployment
+*Design Decisions & Approach*
+
+[Tech Stack & Deployment]
+
 Next.js with TypeScript – Chosen for server-side rendering (SSR) and incremental static regeneration (ISR) to enhance performance and maintainability.
 Material-UI – Enables rapid UI prototyping with a clean, modern, and accessible design.
 Axios – Used for efficient API calls with built-in error handling.
 Deployment via Vercel – Docker was originally planned but encountered compatibility issues on macOS, leading to Vercel as the chosen alternative for its Next.js-optimized hosting.
 
-User Experience & Interface
+[User Experience & Interface]
+
 Minimalist UI – Designed for a clean, uncluttered experience optimized for both desktop and mobile.
 Modal-based Navigation – Clicking a Pokémon opens a modal window, preventing full-page reloads and preserving context.
 Dynamic Theming – Background colors change based on Pokémon type, creating a visually intuitive experience.
 Error Handling & Loading States – Prevents broken user experiences by displaying loading indicators and error messages when API requests fail.
 
-Performance Considerations
+[Performance Considerations]
+
 Optimized API Requests – Pokémon data is fetched only when a type is selected, reducing unnecessary API calls.
 Randomized Selection – Instead of static pagination, Pokémon are shuffled to create a more dynamic experience.
 React Hooks for State Management – useState and useEffect efficiently manage API calls and UI updates.
 Strict TypeScript Typing – Prevents runtime errors and improves overall code maintainability.
+
+---------------------------------------------------------------------------------------------------------------------------------------------
 
 Installation & Running Locally
 1️⃣ Clone the Repository
@@ -35,6 +42,8 @@ npm install
 npm run dev
 The app will be available at http://localhost:3000.
 
+---------------------------------------------------------------------------------------------------------------------------------------------
+
 Deployment
 The project was deployed using Vercel, an optimized hosting platform for Next.js applications.
 
@@ -43,6 +52,8 @@ Live URL: 👉 https://pokemon-dashboard-aq1gpyr3k-timothy-chengs-projects.verce
 Docker Deployment Explanation
 Originally, Docker was planned for deployment, but technical issues on macOS prevented the Docker daemon from running properly.
 As an alternative, Vercel was chosen for its seamless Next.js integration and zero-config deployment.
+
+---------------------------------------------------------------------------------------------------------------------------------------------
 
 Challenges & Solutions
 1️⃣ Docker Deployment Issue
@@ -57,6 +68,8 @@ Solution: Standardized the type definition and explicitly defined the expected A
 Problem: Too many API calls to PokéAPI could cause request failures.
 Solution: Reduced the number of Pokémon fetched per request and used error handling to retry failed requests.
 
+---------------------------------------------------------------------------------------------------------------------------------------------
+
 Future Improvements:
 
 1. Infinite Scroll & Pagination – Currently, Pokémon are randomly selected and limited to 10 per request. Pagination would enhance user experience.
@@ -65,6 +78,7 @@ Future Improvements:
 4. Search Functionality – Allow users to search for Pokémon by name, not just by type.
 5. Music & Sound Effects – Implement Pokémon-inspired music to create a more immersive experience.
 
+---------------------------------------------------------------------------------------------------------------------------------------------
 
 Tech Stack
 Frontend: Next.js, React, TypeScript
