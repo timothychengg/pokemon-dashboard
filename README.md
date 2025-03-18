@@ -49,7 +49,7 @@ Originally, the project was intended to be **Dockerized** for deployment. Howeve
 
 ---
 
-## 📌 Approach & Design Decisions  
+## Approach & Design Decisions  
 
 ### Tech Stack & Deployment  
 - **Next.js with TypeScript** – Enables **server-side rendering (SSR)** and **incremental static regeneration (ISR)** for performance and maintainability.  
@@ -71,7 +71,7 @@ Originally, the project was intended to be **Dockerized** for deployment. Howeve
 
 ---
 
-## 🔥 Future Improvements  
+## Future Improvements  
 
 - **Infinite Scroll & Pagination** – Implement pagination instead of random Pokémon selection to allow better browsing.  
 - **Enhanced Error Handling** – Provide **user-friendly messages** instead of logging errors to the console.  
@@ -81,7 +81,7 @@ Originally, the project was intended to be **Dockerized** for deployment. Howeve
 
 ---
 
-## 📝 What Could Be Improved with More Time  
+## What Could Be Improved with More Time  
 
 If more time were available, these improvements would be prioritized:  
 
@@ -91,7 +91,7 @@ If more time were available, these improvements would be prioritized:
 
 ---
 
-## 📂 Repository  
+## Repository  
 
 GitHub Repository: [Pokemon Dashboard](https://github.com/timothychengg/pokemon-dashboard)  
 
