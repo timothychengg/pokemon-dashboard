@@ -1,91 +1,98 @@
-Pokémon Dashboard
-Live Deployment 👉 https://pokemon-dashboard-aq1gpyr3k-timothy-chengs-projects.vercel.app/
+# Pokémon Dashboard  
 
-The Pokémon Dashboard is an interactive web application that allows users to explore Pokémon by type using the PokéAPI. Built with Next.js and TypeScript, the application delivers a fast, responsive, and visually engaging user experience.
+**Live Deployment:** [Pokemon Dashboard](https://pokemon-dashboard-aq1gpyr3k-timothy-chengs-projects.vercel.app/)  
 
----------------------------------------------------------------------------------------------------------------------------------------------
+The Pokémon Dashboard is an interactive web application that allows users to explore Pokémon by type using the PokéAPI.  
+Built with **Next.js** and **TypeScript**, the application delivers a fast, responsive, and visually engaging user experience.
 
-*Design Decisions & Approach*
+---
 
-[Tech Stack & Deployment]
+##  Project Overview  
 
-Next.js with TypeScript – Chosen for server-side rendering (SSR) and incremental static regeneration (ISR) to enhance performance and maintainability.
-Material-UI – Enables rapid UI prototyping with a clean, modern, and accessible design.
-Axios – Used for efficient API calls with built-in error handling.
-Deployment via Vercel – Docker was originally planned but encountered compatibility issues on macOS, leading to Vercel as the chosen alternative for its Next.js-optimized hosting.
+The Pokémon Dashboard enables users to:  
+- Select a **Pokémon type** and fetch **random Pokémon** belonging to that type.  
+- View **detailed Pokémon stats** in a modal-based UI.  
+- Experience a **responsive and modern** design built with Material-UI.  
+- Ensure **seamless performance** with optimized API requests and state management.  
 
-[User Experience & Interface]
+This project was built to demonstrate **technical expertise**, **UI/UX capabilities**, and **performance optimizations** while working with **Next.js** and **PokéAPI**.
 
-Minimalist UI – Designed for a clean, uncluttered experience optimized for both desktop and mobile.
-Modal-based Navigation – Clicking a Pokémon opens a modal window, preventing full-page reloads and preserving context.
-Dynamic Theming – Background colors change based on Pokémon type, creating a visually intuitive experience.
-Error Handling & Loading States – Prevents broken user experiences by displaying loading indicators and error messages when API requests fail.
+---
 
-[Performance Considerations]
+##  Installation & Running Locally  
 
-Optimized API Requests – Pokémon data is fetched only when a type is selected, reducing unnecessary API calls.
-Randomized Selection – Instead of static pagination, Pokémon are shuffled to create a more dynamic experience.
-React Hooks for State Management – useState and useEffect efficiently manage API calls and UI updates.
-Strict TypeScript Typing – Prevents runtime errors and improves overall code maintainability.
-
----------------------------------------------------------------------------------------------------------------------------------------------
-
-Installation & Running Locally
-1️⃣ Clone the Repository
+### Clone the Repository  
+```sh
 git clone https://github.com/timothychengg/pokemon-dashboard.git
 cd pokemon-dashboard
 
-2️⃣ Install Dependencies
+### Install Dependencies  
+```sh
 npm install
-
-3️⃣ Run the Development Server
+### Run the Development Server  
+```sh
 npm run dev
-The app will be available at http://localhost:3000.
+The application will be available at **[http://localhost:3000](http://localhost:3000)**.
 
----------------------------------------------------------------------------------------------------------------------------------------------
+---
 
-Deployment
-The project was deployed using Vercel, an optimized hosting platform for Next.js applications.
+##  Deployment  
 
-Live URL: 👉 https://pokemon-dashboard-aq1gpyr3k-timothy-chengs-projects.vercel.app/
+The project is **deployed on Vercel**, which provides seamless integration with Next.js.
 
-Docker Deployment Explanation
-Originally, Docker was planned for deployment, but technical issues on macOS prevented the Docker daemon from running properly.
-As an alternative, Vercel was chosen for its seamless Next.js integration and zero-config deployment.
+**Live URL:** [Pokemon Dashboard](https://pokemon-dashboard-aq1gpyr3k-timothy-chengs-projects.vercel.app/)  
 
----------------------------------------------------------------------------------------------------------------------------------------------
+### Docker Deployment (Initially Planned)  
+Originally, the project was intended to be **Dockerized** for deployment. However, due to compatibility issues on macOS, **Vercel** was chosen as the alternative deployment platform.
 
-Challenges & Solutions
-1️⃣ Docker Deployment Issue
-Problem: Docker installation on macOS failed due to system compatibility issues.
-Solution: Switched to Vercel, ensuring a reliable and scalable hosting solution.
+---
 
-2️⃣ TypeScript Type Errors
-Problem: PokemonData had conflicting types when fetching data.
-Solution: Standardized the type definition and explicitly defined the expected API response structure.
+## 📌 Approach & Design Decisions  
 
-3️⃣ API Rate Limits
-Problem: Too many API calls to PokéAPI could cause request failures.
-Solution: Reduced the number of Pokémon fetched per request and used error handling to retry failed requests.
+### Tech Stack & Deployment  
+- **Next.js with TypeScript** – Enables **server-side rendering (SSR)** and **incremental static regeneration (ISR)** for performance and maintainability.  
+- **Material-UI** – Allows rapid UI prototyping with a **clean, accessible, and responsive** design.  
+- **Axios** – Used for efficient **API calls** with built-in error handling.  
+- **Vercel** – Chosen as the **deployment platform** due to its **Next.js optimizations** and **ease of use**.  
 
----------------------------------------------------------------------------------------------------------------------------------------------
+### User Experience & Interface  
+- **Minimalist UI** – Designed for a clean and intuitive experience, optimized for both **desktop and mobile**.  
+- **Modal-based Navigation** – Clicking a Pokémon opens a **modal window**, preserving context and improving UX.  
+- **Dynamic Theming** – Background colors adjust based on **Pokémon type**, enhancing visual clarity.  
+- **Error Handling & Loading States** – Ensures the application remains responsive and does not break due to API failures.  
 
-Future Improvements:
+### Performance Considerations  
+- **Optimized API Requests** – Pokémon data is fetched only **when a type is selected**, reducing unnecessary API calls.  
+- **Randomized Selection** – Instead of static pagination, Pokémon are **shuffled dynamically** to create variety.  
+- **React Hooks for State Management** – `useState` and `useEffect` efficiently handle API calls and UI updates.  
+- **Strict TypeScript Typing** – Ensures **code safety, maintainability, and fewer runtime errors**.  
 
-1. Infinite Scroll & Pagination – Currently, Pokémon are randomly selected and limited to 10 per request. Pagination would enhance user experience.
-2. Better Error Handling – Provide user-friendly error messages when the API fails instead of logging errors in the console.
-3. Animations & Transitions – Add smooth UI animations to enhance engagement.
-4. Search Functionality – Allow users to search for Pokémon by name, not just by type.
-5. Music & Sound Effects – Implement Pokémon-inspired music to create a more immersive experience.
+---
 
----------------------------------------------------------------------------------------------------------------------------------------------
+## 🔥 Future Improvements  
 
-Tech Stack
-Frontend: Next.js, React, TypeScript
-UI Components: Material-UI
-State Management: React Hooks (useState, useEffect)
-Data Fetching: Axios (PokéAPI integration)
-Deployment: Vercel
-Version Control: GitHub
+- **Infinite Scroll & Pagination** – Implement pagination instead of random Pokémon selection to allow better browsing.  
+- **Enhanced Error Handling** – Provide **user-friendly messages** instead of logging errors to the console.  
+- **Animations & Transitions** – Add smooth UI animations for a more engaging user experience.  
+- **Search Functionality** – Allow users to search Pokémon by **name or ID**, not just by type.  
+- **Music & Sound Effects** – Implement Pokémon-inspired music for a more immersive experience.  
+
+---
+
+## 📝 What Could Be Improved with More Time  
+
+If more time were available, these improvements would be prioritized:  
+
+- **Better API Caching** – Reduce API load by caching Pokémon data client-side.  
+- **Dark Mode Support** – Offer a dark mode option for **better user accessibility**.  
+- **Improved Mobile Experience** – Optimize UI elements for **smaller screens** and improve **touch interactions**.  
+
+---
+
+## 📂 Repository  
+
+GitHub Repository: [Pokemon Dashboard](https://github.com/timothychengg/pokemon-dashboard)  
+
+
 
 
