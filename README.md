@@ -23,22 +23,13 @@ Version Control: GitHub
 Installation & Running Locally
 1️⃣ Clone the Repository
 
-sh
-Copy
-Edit
 git clone https://github.com/timothychengg/pokemon-dashboard.git
 cd pokemon-dashboard
 2️⃣ Install Dependencies
 
-sh
-Copy
-Edit
 npm install
 3️⃣ Run the Development Server
 
-sh
-Copy
-Edit
 npm run dev
 The app will be available at http://localhost:3000.
 
