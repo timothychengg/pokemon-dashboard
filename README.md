@@ -25,13 +25,15 @@ This project was built to demonstrate **technical expertise**, **UI/UX capabilit
 ```sh
 git clone https://github.com/timothychengg/pokemon-dashboard.git
 cd pokemon-dashboard
-
+```
 ### Install Dependencies  
 ```sh
 npm install
+```
 ### Run the Development Server  
 ```sh
 npm run dev
+```
 The application will be available at **[http://localhost:3000](http://localhost:3000)**.
 
 ---
