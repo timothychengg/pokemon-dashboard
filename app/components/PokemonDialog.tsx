@@ -8,6 +8,8 @@ import {
   Typography,
 } from '@mui/material';
 
+import Image from 'next/image';
+
 interface PokemonDialogProps {
   open: boolean;
   onClose: () => void;
@@ -61,7 +63,7 @@ const PokemonDialog: React.FC<PokemonDialogProps> = ({
             {pokemon.name.toUpperCase()}
           </DialogTitle>
           <DialogContent>
-            <img
+            <Image
               src={pokemon.sprites?.front_default}
               alt={pokemon.name}
               className='pokemon-image'

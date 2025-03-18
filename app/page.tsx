@@ -1,5 +1,25 @@
 'use client';
 
+interface PokemonListItem {
+  pokemon: { name: string; url: string };
+}
+
+interface PokemonAPIResponse {
+  pokemon: PokemonListItem[];
+}
+
+export interface PokemonStat {
+  base_stat: number;
+  stat: { name: string }; 
+}
+
+export interface PokemonData {
+  name: string;
+  sprites: { front_default: string };
+  types: { type: { name: string } }[];
+  stats: PokemonStat[];
+}
+
 import { useState, useEffect } from 'react';
 import axios from 'axios';
 import { Container, Grid, Typography, Box } from '@mui/material';
@@ -31,12 +51,13 @@ const PokemonDashboard: React.FC = () => {
     setSelectedType(type);
 
     try {
-      const response = await axios.get(
+      const response = await axios.get<PokemonAPIResponse>(
         `https://pokeapi.co/api/v2/type/${type.toLowerCase()}`
       );
+
       setPokemonList(
         response.data.pokemon
-          .map((p: any) => p.pokemon)
+          .map((p) => p.pokemon)
           .sort(() => Math.random() - 0.5)
           .slice(0, 10)
       );
@@ -50,10 +71,8 @@ const PokemonDashboard: React.FC = () => {
 
   const fetchPokemonDetails = async (pokemonUrl: string) => {
     setLoading(true);
-    setSelectedPokemon(null);
-
     try {
-      const response = await axios.get(pokemonUrl);
+      const response = await axios.get<PokemonData>(pokemonUrl);
       setSelectedPokemon(response.data);
       setOpen(true);
     } catch (error) {
